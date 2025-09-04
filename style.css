@@ -1,0 +1,47 @@
+/* Simple clean styles for the quiz site */
+:root{
+  --bg:#f7f8fb; --card:#fff; --primary:#2c3e50; --accent:#1abc9c; --muted:#6b6f76;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; margin:0; background:var(--bg); color:#222; -webkit-font-smoothing:antialiased}
+.container{max-width:900px;margin:26px auto;padding:0 16px}
+.topbar{background:var(--primary); color:#fff;padding:18px 0}
+.topbar .container{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.topbar h1{margin:0;font-size:20px}
+.tagline{margin:0;opacity:0.9;font-size:13px}
+
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(22,30,44,0.06);margin-bottom:18px}
+.small{font-size:13px;color:var(--muted);text-align:center}
+
+.topic-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.topic-btn{padding:12px 14px;border-radius:8px;border:1px solid #e6e9ee;background:#fff;cursor:pointer;font-weight:600;min-width:160px;text-align:center}
+.topic-btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(30,40,50,0.06)}
+
+.quiz-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.topic-title{font-weight:700}
+.status{color:var(--muted);font-size:14px;display:flex;gap:12px;align-items:center}
+
+#question-text{margin:12px 0 8px 0}
+.options-list{list-style:none;padding:0;margin:0}
+.options-list li{padding:12px;border-radius:8px;background:#f3f6f8;margin-bottom:8px;cursor:pointer;border:1px solid transparent;display:flex;align-items:center;gap:10px}
+.options-list li:hover{transform:translateY(-2px)}
+.options-list li.selected{outline:2px solid rgba(44,62,80,0.08);background:#eef3f7}
+.options-list li.correct{background:#e9f9ee;border-color:#22a06b}
+.options-list li.wrong{background:#fff2f2;border-color:#f06b6b}
+
+.controls{display:flex;gap:10px;align-items:center;margin-top:12px}
+.btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
+.primary{background:var(--primary);color:#fff}
+.ghost{background:#fff;border:1px solid #e3e6ea;color:#222}
+.hidden{display:none}
+.feedback{margin-top:10px;font-weight:700}
+.explanation{margin-top:10px;padding:10px;border-left:4px solid var(--accent);background:#f7fffb;border-radius:6px}
+
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.review-area{margin-top:12px}
+
+.note{margin-top:14px;color:var(--muted);font-size:13px}
+@media(max-width:520px){
+  .topic-grid{flex-direction:column}
+  .topbar .container{align-items:flex-start}
+}

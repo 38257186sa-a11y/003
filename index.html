@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>UGC NET Political Science — Quiz Hub</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>UGC NET Political Science — Quiz Hub</h1>
+      <p class="tagline">Practice MCQs by topic • Add questions easily • Host on GitHub Pages</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Home / Topic Selection -->
+    <section id="home" class="card">
+      <h2>Select a Quiz Topic</h2>
+      <div id="topics" class="topic-grid"></div>
+      <div class="note">
+        <strong>Tip:</strong> To add topics or questions, edit <code>questions.js</code> or host and add a JSON file (see README).
+      </div>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz" class="card hidden">
+      <div class="quiz-head">
+        <div id="topic-title" class="topic-title"></div>
+        <div class="status">
+          <span id="progress">0 / 0</span>
+          <span id="score">Score: 0</span>
+        </div>
+      </div>
+
+      <div id="question-block">
+        <h3 id="question-text">Question will appear here</h3>
+        <ul id="options" class="options-list"></ul>
+
+        <div class="controls">
+          <button id="submit-btn" class="btn primary">Submit</button>
+          <button id="next-btn" class="btn ghost hidden">Next</button>
+          <button id="finish-btn" class="btn ghost hidden">Finish</button>
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+        <div id="explanation" class="explanation hidden"></div>
+      </div>
+    </section>
+
+    <!-- Result / Review -->
+    <section id="result" class="card hidden">
+      <h2>Quiz Completed</h2>
+      <p id="final-score">You scored X / Y</p>
+      <div class="result-actions">
+        <button id="retry-btn" class="btn primary">Retry</button>
+        <button id="review-btn" class="btn ghost">Review Answers</button>
+        <button id="back-btn" class="btn ghost">Back to Topics</button>
+      </div>
+      <div id="review-area" class="review-area hidden"></div>
+    </section>
+
+    <footer class="card small">
+      <p>Edit <code>questions.js</code> to add more topics and questions. To host on GitHub Pages: create a repo, push these files to main branch, then enable Pages in repo settings.</p>
+    </footer>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
